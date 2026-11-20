@@ -41,26 +41,3 @@ features:
 零源码补丁（不动编辑器源码）：可以从 VS Code 市场 / Open VSX / VSIX 作为普通扩展安装，也可以用脚本装成 App 的内置扩展。版本 1.79.0 · [English README](https://github.com/eppen/luban#readme)
 
 </div>
-
-<style>
-.screenshots {
-  max-width: 1152px;
-  margin: 0 auto;
-  padding: 0 24px 48px;
-  text-align: center;
-}
-.screenshots img {
-  width: 100%;
-  border-radius: 12px;
-  border: 1px solid var(--vp-c-divider);
-  margin-bottom: 24px;
-}
-.footer-note {
-  max-width: 1152px;
-  margin: 0 auto;
-  padding: 0 24px 64px;
-  text-align: center;
-  color: var(--vp-c-text-2);
-  font-size: 14px;
-}
-</style>
