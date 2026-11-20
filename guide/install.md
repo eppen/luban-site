@@ -34,6 +34,32 @@ cd ~/luban
 
 重启后侧边栏会**自动打开**（可用设置项 `luban.autoOpen` 关掉）。这种方式不跟随市场自动更新，日常建议用市场版。
 
+## 命令行（CLI）
+
+不想开编辑器也能用：CLI 是同一个 agent 循环的无头入口，和扩展共用 `~/.luban/providers.json`（配好的 provider 两边通用）。
+
+```bash
+npm i -g @luban-code/luban-code
+luban --version          # 应打印 luban 1.x.y
+```
+
+包带三个可执行入口：
+
+| 命令 | 用途 |
+|---|---|
+| `luban` | 主入口（`luban-code` 是它的同义命令） |
+| `luban-acp` | ACP 协议模式，供编辑器 / 客户端接入 |
+
+升级 CLI 自身：
+
+```bash
+luban upgrade            # 检查并安装最新版
+luban upgrade --check    # 只检查不安装：有更新退 1，无更新退 0（脚本 / CI 用）
+```
+
+- 升级成功后当前进程不会热更新，**重开终端**才生效。
+- 不想装到全局，可以临时跑：`npx @luban-code/luban-code@latest "<任务描述>"`（每次都取最新，不落盘到环境里）。
+
 ## 下一步
 
 装好后看 [快速开始](/guide/quickstart) 配 provider、打开面板、提第一个需求。
